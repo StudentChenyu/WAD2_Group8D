@@ -152,7 +152,7 @@ def upload_books(request):
         form = BookForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('book')
+            return redirect('index')
     else:
         form = BookForm()
     context_dict['form'] = form        
